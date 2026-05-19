@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Trials Finder - Find Research Studies That May Be Right For You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 2L4 8V14C4 21 10 27 16 30C22 27 28 21 28 14V8L16 2Z" fill="#2563eb" stroke="#1e40af" stroke-width="2"/>
+                    <path d="M16 10V22M10 16H22" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <span>Clinical Trials Finder</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#search">Find Trials</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Find Clinical Trials That May Be Right For You</h1>
+                <p class="hero-subtitle">Connecting patients with research opportunities to advance medical science and improve health outcomes</p>
+                <div class="hero-cta">
+                    <button onclick="scrollToSection('search')" class="btn btn-primary btn-large">Search Clinical Trials</button>
+                    <button onclick="scrollToSection('how-it-works')" class="btn btn-secondary btn-large">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number">375,000+</div>
+                    <div class="stat-label">Clinical Trials</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">Safe</div>
+                    <div class="stat-label">IRB Approved</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">Free</div>
+                    <div class="stat-label">To Join</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Finding the right clinical trial is simple</p>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M24 14V28M18 22L24 28L30 22" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>1. Describe Your Condition</h3>
+                    <p>Tell us about your medical condition, symptoms, and treatment history in your own words</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M20 24L23 27L29 21M24 4C13 4 4 13 4 24C4 35 13 44 24 44C35 44 44 35 44 24C44 13 35 4 24 4Z" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>2. Get Matched</h3>
+                    <p>Our system searches thousands of trials to find ones that match your health profile</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+                            <path d="M14 24H34M34 24L28 18M34 24L28 30" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>3. Learn & Connect</h3>
+                    <p>Review trial details and contact research teams to learn if you're eligible</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="search" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Search Clinical Trials</h2>
+            <p class="section-subtitle">Find research studies based on your health information</p>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <label for="patient-info">Describe your condition or symptoms:</label>
+                    <textarea
+                        id="patient-info"
+                        placeholder="Example: I'm a 45-year-old woman with type 2 diabetes. I was diagnosed 3 years ago and am currently taking metformin. My A1C is 7.8% and I'm interested in new treatment options..."
+                        rows="6"
+                    ></textarea>
+
+                    <div class="location-input">
+                        <label for="user-location">Your location (optional - to find nearby trials):</label>
+                        <div class="location-input-group">
+                            <input
+                                type="text"
+                                id="user-location"
+                                placeholder="Enter city, state, or zip code (e.g., Boston, MA or 02115)"
+                            />
+                            <button id="use-current-location" class="btn btn-secondary btn-small" title="Use my current location">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M8 1V3M8 13V15M1 8H3M13 8H15M8 11C9.65685 11 11 9.65685 11 8C11 6.34315 9.65685 5 8 5C6.34315 5 5 6.34315 5 8C5 9.65685 6.34315 11 8 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                Use Current Location
+                            </button>
+                        </div>
+                        <div id="location-status" class="location-status"></div>
+                    </div>
+
+                    <div class="search-tips">
+                        <strong>Tips for better results:</strong>
+                        <ul>
+                            <li>Include your age and gender</li>
+                            <li>Mention your diagnosis and how long you've had it</li>
+                            <li>List current medications or treatments</li>
+                            <li>Describe any test results (like lab values)</li>
+                            <li>Note any other health conditions</li>
+                        </ul>
+                    </div>
+
+                    <div class="search-filters">
+                        <label class="filter-checkbox">
+                            <input type="checkbox" id="filter-md-anderson" />
+                            <span>Only show MD Anderson Cancer Center trials</span>
+                        </label>
+                        <label class="filter-checkbox">
+                            <input type="checkbox" id="filter-nearby" />
+                            <span>Prioritize trials within 50 miles (requires location)</span>
+                        </label>
+                    </div>
+
+                    <button id="search-btn" class="btn btn-primary btn-large">Search Trials</button>
+                </div>
+
+                <div id="results" class="results-container" style="display: none;">
+                    <div class="results-header">
+                        <h3>Matching Clinical Trials</h3>
+                        <div class="results-count"></div>
+                    </div>
+                    <div id="results-list"></div>
+                </div>
+
+                <div id="loading" class="loading" style="display: none;">
+                    <div class="spinner"></div>
+                    <p>Searching clinical trials database...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Clinical Trials</h2>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>What are Clinical Trials?</h3>
+                    <p>Clinical trials are research studies that test new treatments, drugs, or medical approaches in people. They help doctors and scientists discover whether new treatments are safe and effective.</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Comprehensive Trial Coverage</h3>
+                    <p>Our database searches ClinicalTrials.gov, which includes trials from:</p>
+                    <ul>
+                        <li><strong>MD Anderson Cancer Center</strong> - All registered trials</li>
+                        <li><strong>Mayo Clinic</strong> - Nationwide locations</li>
+                        <li><strong>Memorial Sloan Kettering</strong> - Cancer research</li>
+                        <li><strong>Johns Hopkins</strong> - All specialties</li>
+                        <li><strong>Cleveland Clinic</strong> - Major medical center</li>
+                        <li><strong>NCI-funded trials</strong> - National Cancer Institute</li>
+                        <li>And 1,000+ other institutions nationwide</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Why Participate?</h3>
+                    <ul>
+                        <li>Access to new treatments before they're widely available</li>
+                        <li>Close monitoring by medical professionals</li>
+                        <li>Contribute to medical research that helps others</li>
+                        <li>Treatment may be provided at no cost</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Understanding Eligibility</h3>
+                    <p>Each trial has specific requirements called inclusion and exclusion criteria. These ensure participant safety and help researchers get accurate results.</p>
+                    <ul>
+                        <li><strong>Eligible:</strong> You meet requirements and have no exclusions</li>
+                        <li><strong>Excluded:</strong> You meet some requirements but have a condition that excludes you</li>
+                        <li><strong>Insufficient Info:</strong> More information needed to determine eligibility</li>
+                    </ul>
+                </div>
+
+                <div class="info-card">
+                    <h3>Your Rights as a Participant</h3>
+                    <ul>
+                        <li>Participation is always voluntary</li>
+                        <li>You can withdraw at any time</li>
+                        <li>Informed consent explains all risks and benefits</li>
+                        <li>Your privacy is protected</li>
+                        <li>Studies are reviewed by ethics committees (IRBs)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are clinical trials safe?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Clinical trials follow strict scientific and ethical guidelines. All trials must be approved by Institutional Review Boards (IRBs) that ensure participant safety. Trials progress through phases, with early phases testing safety before moving to larger studies.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Will I receive a placebo or the real treatment?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Some trials use placebos, while others compare new treatments to standard treatments. The informed consent document will clearly explain the study design, including the possibility of receiving a placebo. You'll know this information before deciding to participate.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How much does it cost to participate?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The investigational treatment and trial-related care are typically provided at no cost. Some trials may also cover travel expenses or provide compensation for your time. Your regular medical care costs may still apply and should be discussed with the research team.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I know if I'm eligible?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Each trial has specific inclusion and exclusion criteria. This search tool provides an initial match, but final eligibility is determined through screening by the research team. Contact the trial coordinator to discuss your specific situation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I leave a trial after I join?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, participation is always voluntary. You can withdraw from a clinical trial at any time for any reason. It's helpful to discuss your concerns with the research team, but the decision is ultimately yours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Clinical Trials Finder</h4>
+                    <p>Connecting patients with research opportunities</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://clinicaltrials.gov" target="_blank">ClinicalTrials.gov</a></li>
+                        <li><a href="https://www.nih.gov/health-information/nih-clinical-research-trials-you" target="_blank">NIH Clinical Research</a></li>
+                        <li><a href="https://www.fda.gov/patients/clinical-trials-what-patients-need-know" target="_blank">FDA Patient Information</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Disclaimer</h4>
+                    <p class="disclaimer">This tool is for informational purposes only and does not constitute medical advice. Always consult with your healthcare provider before making decisions about your medical care or participating in clinical trials.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Clinical Trials Finder. Data sourced from TREC Clinical Trials Track (2021-2022) and ClinicalTrials.gov</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
